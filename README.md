@@ -1,25 +1,18 @@
-# Trabajo Final - Curso de Python
+# Sistema de Gestión de Inventario (Python + SQLite)
 
-Repositorio correspondiente al proyecto final obligatorio para la aprobación del curso de programación en Python. Consiste en un sistema de gestión de inventario desarrollado bajo los requerimientos técnicos solicitados.
+Aplicación de consola en Python que guarda los productos en `inventario.db` usando `sqlite3` y utiliza `colorama` para resaltar mensajes y alertas en terminal.
 
-## 🚀 Características del Proyecto
-- **Base de Datos SQLite (`inventario.db`):** Almacenamiento local estructurado con la tabla `productos` (ID autoincremental, nombre, descripción, cantidad, precio y categoría).
-- **Gestión CRUD Completa:** 
-  - Registro de nuevos productos con validación de datos.
-  - Visualización en formato de tabla organizada en consola.
-  - Actualización de registros mediante su ID único.
-  - Eliminación segura de productos mediante ID con confirmación.
-- **Búsqueda Avanzada:** Filtrado por ID, nombre o categoría.
-- **Reportes de Stock Crítico:** Generación de listados filtrados por un límite máximo especificado por el usuario.
-- **Modularización y Buenas Prácticas:** Código estructurado en funciones independientes, con comentarios educativos explicativos y manejo de errores.
+## Funcionalidades
 
-## 🛠️ Requisitos Técnicos
-- Python 3.x
-- Librería estándar `sqlite3` (no requiere instalaciones externas adicionales).
+- Registrar productos con validación de nombre obligatorio y números no negativos (admite punto o coma en precios).
+- Visualizar todos los productos con subtotal por ítem y valor total del inventario.
+- Actualizar productos por `ID` (presionar `Enter` mantiene el valor actual).
+- Eliminar productos por `ID` con confirmación (`s/n`).
+- Buscar productos por `ID`, `Nombre` o `Categoría`.
+- Generar reporte de stock crítico (`cantidad <= límite`) resaltando productos agotados (`0` unidades).
 
-## ⚙️ ¿Cómo ejecutar la aplicación?
-1. Clona este repositorio o descarga los archivos en tu computadora.
-2. Abre una terminal en la carpeta del proyecto.
-3. Ejecuta el siguiente comando:
+## Uso
+
+1. Instalar dependencias:
    ```bash
-   python app_inventario.py
+   pip install -r requirements.txt
