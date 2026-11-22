@@ -1,17 +1,17 @@
-# Sistema de Gestión de Inventario (Python + SQLite)
+# Trabajo Final Python — Sistema de Gestión de Inventario (Python + SQLite)
 
-Aplicación de consola en Python que guarda los productos en `inventario.db` usando `sqlite3` y utiliza `colorama` para resaltar mensajes y alertas en terminal.
+Aplicación de consola desarrollada en Python utilizando `sqlite3` para persistir productos en `inventario.db` y `colorama` para mejorar la lectura en terminal.
 
 ## Funcionalidades
 
-- Registrar productos con validación de nombre obligatorio y números no negativos (admite punto o coma en precios).
-- Visualizar todos los productos con subtotal por ítem y valor total del inventario.
-- Actualizar productos por `ID` (presionar `Enter` mantiene el valor actual).
-- Eliminar productos por `ID` con confirmación (`s/n`).
-- Buscar productos por `ID`, `Nombre` o `Categoría`.
-- Generar reporte de stock crítico (`cantidad <= límite`) resaltando productos agotados (`0` unidades).
+- **Registrar producto:** Alta con validación de nombre obligatorio, cantidad entera no negativa y precio decimal no negativo (admite punto o coma).
+- **Visualizar productos:** Listado en tabla con subtotal por producto (`cantidad * precio`) y valor total del inventario.
+- **Actualizar producto:** Modificación por `ID` permitiendo conservar los valores actuales presionando `Enter`.
+- **Eliminar producto:** Baja por `ID` con confirmación (`s/n`).
+- **Buscar producto:** Consulta por `ID`, `Nombre` o `Categoría`.
+- **Reporte de stock crítico:** Muestra productos con `cantidad <= límite` indicado por el usuario, resaltando los que están agotados (`0` unidades).
 
-## Uso
+## Instalación y ejecución
 
 1. Instalar dependencias:
    ```bash
